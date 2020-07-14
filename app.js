@@ -33,10 +33,21 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect("mongodb://localhost:27017/hotelDB", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+const admin = process.env.ADMIN_ID;
+const adminPass = process.env.ADMIN_PASS;
+
+mongoose.connect(
+  "mongodb+srv://admin-" +
+    admin +
+    ":" +
+    adminPass +
+    "@cluster0-jlcms.mongodb.net/hotelDB",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }
+);
+
 mongoose.set("useCreateIndex", true);
 
 const userSchema = new mongoose.Schema({
