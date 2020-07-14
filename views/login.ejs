@@ -1,0 +1,32 @@
+<%-include("partials/header");%>
+
+<div class="container login-page-con">
+  <div class="row login-page mx-auto">
+    <form action="/login" method="post">
+    <h5>Email:</h5>
+    <input
+      type="text"
+      class="login-email"
+      name="username"
+    />
+    <h5>Password:</h5>
+    <input type="password" class="login-password" name="password" />
+
+    <div class="loginErrorMessage">
+      <p><%=loginErrorMessage%></p>
+    </div>
+
+    <div class="mx-auto login-button">
+      <button type="submit">Login</button>
+      <button type="button" id="toSignupPage">Sign Up</button>
+      <script type="text/javascript">
+        document.getElementById("toSignupPage").onclick = function () {
+          location.href = "/signup";
+        };
+      </script>
+    </div>
+    </form>
+  </div>
+</div>
+
+<%-include("partials/footer");%>

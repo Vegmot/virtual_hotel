@@ -1,0 +1,432 @@
+/*********************Global*************************/
+/*Font families: Montserrat, Ubuntu, Roboto, Open Sans*/
+
+/*
+Font-size and line-height formula:
+For example,
+if we want the font-size in a range where 14px is the minimum size at the smallest viewport width of 300px
+and where 26px is the maximum size at the largest viewport width of 1600px,
+then our equation looks like this:
+
+font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
+
+The same goes for the line-height. So...
+
+font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));
+
+https: //css-tricks.com/books/fundamental-css-tactics/scale-typography-screen-size/
+*/
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 3.5rem;
+}
+
+/*********************Navbar*************************/
+
+
+.logo-image {
+    width: 40%;
+}
+
+
+/*********************Title*************************/
+
+#title {
+    padding: 5% 8%;
+    height: 500px;
+    background-image: url("../img/beach.png");
+    background-repeat: no-repeat;
+    background-position: center -200px;
+    text-align: center;
+
+}
+
+.main-title {
+    margin-top: 98px;
+    color: white;
+    font-family: Roboto;
+}
+
+.title-para {
+    font-size: 1.5rem;
+}
+
+.title-image {
+    width: 80%;
+}
+
+/*******************Index-Features***********************/
+
+#features {
+    text-align: center;
+    padding: 5% 8%;
+    background: #fafafa;
+}
+
+.features-heading {
+    margin-bottom: 80px;
+    line-height: 1.5;
+}
+
+.features.row {
+    margin-bottom: 80px;
+}
+
+.dwld-btn {
+    margin: 0 1%;
+}
+
+.feature-text {
+    margin: 4% auto 8% auto;
+}
+
+/*********************Index-Pricing*************************/
+
+#pricing {
+    padding: 5% 8%;
+}
+
+.pricing-info {
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.pricing-heading {
+    font-weight: 900;
+}
+
+.card-group {
+    width: 100%;
+}
+
+.card-body {
+    padding: 5%;
+}
+
+
+
+/*********************Index-Press*************************/
+
+#press {
+    padding: 5% 8%;
+    text-align: center;
+}
+
+.press-info {
+    font-weight: 900;
+    margin-bottom: 6%;
+}
+
+.press-img {
+    width: 90%;
+    margin-bottom: 4%;
+}
+
+.showmore {
+    margin: 5% auto 0 auto;
+}
+
+.hidden-md {
+    display: none;
+}
+
+
+.showmore-btn {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    border: none;
+    color: #000000;
+    font-family: Arial;
+    padding: 16px;
+    background-color: transparent;
+    text-align: center;
+}
+
+.showmore-btn:hover {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    border: none;
+}
+
+/*****************Index-Call to Action********************/
+
+#cta {
+    text-align: center;
+    padding: 5% 8%;
+    background: #fafafa;
+}
+
+.main-cta {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.cta-info {
+    margin-bottom: 8%;
+}
+
+.cta-description {
+    margin-top: 6%;
+}
+
+.cta-name {
+    font-weight: 900;
+}
+
+/*********************Index-Contact***********************/
+
+#contact {
+    text-align: center;
+    margin: 5% 8%;
+}
+
+.contact-heading {
+    padding: 5%;
+}
+
+.contact-heading h2 {
+    font-weight: 900;
+}
+
+.contact-icon {
+    margin: 0 3%;
+}
+
+.main-contact {
+    margin-bottom: 10%;
+}
+
+.main-contact a {
+    text-decoration: none;
+    color: black;
+}
+
+/*********************Photos.ejs***********************/
+.photos-row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+.photos-img-col {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.photos-img-col img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.photos-page-text {
+    text-align: center;
+    margin: 8% auto;
+}
+
+.photos-page-text h2 {
+    font-weight: bold;
+}
+
+.photos-page-pages {
+    margin: 5% auto;
+}
+
+.photos-page-pages .page-item, 
+.photos-page-pages .page-link {
+    color: #000 !important;
+}
+
+.photos-page-pages .page-item.active a {
+    color: #fff !important;
+}
+
+.photos-page-pages .page-item.disabled a {
+    color: grey !important;
+}
+
+
+
+/*********************Features.ejs***********************/
+
+/*********************Contact.ejs***********************/
+.contact-page-h1,
+.contact-page-category {
+    text-align: center;
+}
+
+.contact-page-h1 {
+    margin: 8% auto;
+}
+
+.contact-page-category-reservation,
+.contact-page-category-pricing,
+.contact-page-category-currency,
+.contact-page-category-services,
+.contact-page-category-technical,
+.contact-page-category-etc {
+    width: 80%;
+    height: 60%;
+    margin: 0 auto;
+}
+
+.contact-page-category-services,
+.contact-page-category-technical,
+.contact-page-category-etc {
+    border-top: 1px solid #000;
+    width: 50%;
+    padding-top: 5%;
+}
+
+.contact-page-category a {
+    color: #000;
+    border: 1px solid #000;
+    padding: 2% 5%;
+}
+
+.contact-page-category a:hover {
+    text-decoration: none;
+    color: #000;
+    border: 1px solid #000;
+    padding: 2% 5%;
+}
+
+.contact-page-social-network {
+    margin: 15% auto 10% auto;
+}
+
+.contact-page-social-network a,
+.contact-page-social-network a:hover {
+    border: none;
+}
+
+
+.contact-page-category-list h3 {
+    padding-top: 10%;
+}
+
+/*********************Cta.ejs***********************/
+
+/*********************Pricing.ejs***********************/
+
+/*********************downloadApp.ejs***********************/
+.download-app-buttons {
+    width: 25%;
+    margin: 5% auto;
+}
+
+
+
+
+/*********************signup.ejs***********************/
+.signup-page-con {
+    margin: 5% auto;
+}
+
+.signup-page.row {
+    width: 25%;
+}
+
+.signup-button {
+    margin-top: 20%;
+    width: 45%;
+}
+
+
+
+
+/*********************login.ejs***********************/
+.login-page-con {
+    margin: 5% auto;
+}
+
+.login-page.row {
+    width: 25%;
+}
+
+.login-button {
+    margin-top: 20%;
+    width: 45%;
+}
+
+
+
+/*********************index-Footer***********************/
+#footer {
+    text-align: center;
+    background: #e4f7f7;
+    width: 100%;
+}
+
+.main-footer {
+    margin: 0;
+    padding: 2% 0;
+    width: 100%;
+}
+
+.copy {
+    margin: 0;
+
+}
+
+/*********************Media Query********************/
+@media (max-width: 1500px) {
+    body {
+        font-size: 100%;
+    }
+}
+
+/* large and above */
+@media (min-width: 992px) {
+    .showmore {
+        display: none;
+    }
+
+    .hidden-md {
+        display: block;
+    }
+}
+
+/* large and below */
+@media (max-width: 991.9px) {
+    .showmore {
+        display: block;
+    }
+
+    .photos-img-col {
+        flex: 50%;
+        max-width: 50%;
+    }
+
+}
+
+/* medium? and below */
+@media (max-width: 576px) {
+    body {
+        font-size: 5em;
+    }
+
+    .showmore {
+        display: block;
+    }
+
+    /* .hidden {
+        display: none;
+    } */
+
+    .photos-img-col {
+    flex: 100%;
+    max-width: 100%;
+}
+
+
+}

@@ -1,0 +1,16 @@
+<%-include("partials/header")%>
+
+
+    <p>Username: <%=foundUser.username%></p>
+    <p>Full name: <%=foundUser.firstName%> <%=foundUser.lastName%></p>
+    <p>Password: ****</p>
+    <p>Date signed up: <%=foundUser.signupDate%></p>
+    <p>IP address: <%=foundUser.ipAddress%></p>
+    <br><hr><br>
+
+
+    <div class="logoutButton">
+        <a class="btn btn-light btn-lg" href="/logout" role="button">Log Out</a>
+    </div>
+
+<%-include("partials/footer")%>
