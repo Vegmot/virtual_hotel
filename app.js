@@ -208,18 +208,6 @@ app.post("/signup", (req, res) => {
         req.socket.remoteAddress ||
         (req.connection.socket ? req.connection.socket.remoteAddress : null);
 
-        /*
-        const user = new User({
-        username: req.body.username,
-        firstName: _.upperFirst([_.toLower([req.body.signupFirstName])]),
-        lastName: _.upperFirst([_.toLower([req.body.signupLastName])]),
-        password: req.body.password,
-        signupDate: signupDate,
-        ipAddress: ipAddress,
-        });
-        */
-
-
       // ...register the user
       User.register(
         {
