@@ -191,11 +191,12 @@ app.post("/signup", (req, res) => {
     const options = {weekday: "long"};
     const suDay = new Intl.DateTimeFormat('en-US', options).format(new Date());
     
-    const suMonth = new Date().getMonth();
-    const suDate = new Date().getDate();
-    const suYear = new Date().getFullYear();
-    const suHour = new Date().getHours();
-    const suMinute = new Date().getMinutes();
+    const currentDate = new Date();
+    const suMonth = currentDate.getMonth() + 1;
+    const suDate = currentDate.getDate();
+    const suYear = currentDate.getFullYear();
+    const suHour = currentDate.getHours() - 7;
+    const suMinute = currentDate.getMinutes();
     
     const signupDate = suMonth + "/" + suDate + "/" + suYear + ", " + suDay + ", " + suHour + ":" + suMinute;
 
