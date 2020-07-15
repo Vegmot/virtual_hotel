@@ -195,7 +195,7 @@ app.post("/signup", (req, res) => {
     const suMonth = currentDate.getMonth() + 1;
     const suDate = currentDate.getDate();
     const suYear = currentDate.getFullYear();
-    const suHour = currentDate.getHours() - 7;
+    const suHour = currentDate.getHours();
     const suMinute = currentDate.getMinutes();
     
     const signupDate = suMonth + "/" + suDate + "/" + suYear + ", " + suDay + ", " + suHour + ":" + suMinute;
