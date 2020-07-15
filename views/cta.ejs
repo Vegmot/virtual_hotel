@@ -1,10 +1,22 @@
 <%- include("partials/header"); %>
 
 <div class="cta-page">
-  <h3>Subscribe to get daily/weekly/monthly offers and promo codes.</h3>
+  <div class="cta-bait">
+    <h3>Keep posted to get special offers and promo codes.</h3>
+    <h5>
+      Coupons for free F&B coupons, amenities discount, free spa or massage,
+      yoga session or cooking class.
+    </h5>
+    <h5>Try your luck!</h5>
+  </div>
   <form action="/cta" method="post">
-    <input type="email" class="cta-subscription-email" name="ctaSubscriptionEmail" />
-    <button type="submit">Subscribe</button>
+    <h5>Enter your email to...</h5>
+    <input
+      type="email"
+      class="cta-subscription-email"
+      name="ctaSubscriptionEmail"
+    />
+    <button class="subscripbe-button" type="submit">Subscribe!</button>
   </form>
 </div>
 
